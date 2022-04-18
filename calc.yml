@@ -1,0 +1,9 @@
+---
+- name: Deploy docker img
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Pull mycalculator image
+      docker_image:
+        name: anjanvikas/mycalculator
+        source: pull
